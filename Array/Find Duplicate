@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+    Scanner ricky = new Scanner(System.in);
+
+    System.out.print("Enter array size(MAX 50):: ");
+    int numArray = ricky.nextInt();
+    
+    if (numArray > 50 || numArray < 0) {
+        System.out.println("Invalid array size. Please enter a size between 1 and 50.");
+    return;
+        
+    }
+
+    int[] arr = new int[numArray];
+    System.out.println("Enter array elements:");
+    for (int i = 0; i < numArray; i++) {
+        System.out.print("Enter arr[" + i + "] Element: ");
+        arr[i] = ricky.nextInt();
+    }
+
+    System.out.println("\nStored Data in array:");
+    
+    for (int i = 0; i < numArray; i++) {
+        System.out.print(arr[i] + " ");
+    }
+    
+    System.out.print("\n" + "Duplicate Values in Given Array are:: ");
+    for(int i = 0; i < arr.length; i++) {  
+            for(int j = i + 1; j < arr.length; j++) {  
+                if(arr[i] == arr[j])  
+                    System.out.println("\n" + arr[j]);  
+            }  
+        }  
+
+	}
+}
