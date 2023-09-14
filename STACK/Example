@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Stack<Integer> stk = new Stack<Integer>();
+		
+		
+		// Inserting from the stack
+		stk.push(46);
+		stk.push(23);
+		stk.push(12);
+		stk.push(26);
+		stk.push(4);
+		System.out.print("The stack is:: " +stk);
+		
+		Integer pos = (Integer) stk.peek();
+		System.out.print("\nThe element found is:: " +pos);
+		
+		// Asking if the stack is empty
+		System.out.println("\nStack empty? " +stk.isEmpty());
+		
+		// Deletion from the stack
+		System.out.print("The popped element is:: ");
+		Integer n = (Integer) stk.pop();
+		System.out.print(n);
+		
+		// searching element from stack
+		pos = (Integer) stk.search(23);
+		if (pos == -1)
+		    System.out.print("\nThe element not found in stack");
+		else
+		    System.out.print("\nThe element found in stack " +pos);
+
+	}
+}
